@@ -32,9 +32,6 @@ class AddableTaskService {
         if(!taskClusterService.validateTaskClusterId(addableTask.taskClusterId)){
             return false
         }
-        if(!taskRevisionService.validateTaskRevisionId(addableTask.taskRevisionId)){
-            return false
-        }
 
 
 

@@ -4,34 +4,46 @@ import javax.validation.constraints.*
 
 
 class AddableTask (
-        @get: NotNull @get: NotEmpty @get: NotBlank @get: Size(min = 10)
+        //TODO create check
+        var profileTaskId: Long? = null,
+        //TODO create check
+        val functionProfileRevisionId: Long,
+        //Is checked through own validation
+        val domainId: Long,
+        //Is checked through own validation
+        val taskClusterId: Long = 1,
+        //Is checked through own validation
+        val competenceId: Long,
+        //Should exist because we create this when adding a task
+        var taskRevisionId: Long?,
+        @get: NotNull @get: Size(min = 10)
         val displayName: String,
-        val dot: String? = null,
         @get: Max( 2000)
         val rank: Int = 1000,
-        val active: Int = 0,
         @get: Min(0)
         val solverMinTime: Int = 1,
         @get: Max(120)
         val solverMaxTime: Int = 80,
         @get: Min(0) @get: Max(1)
         val revision: Int = 1,
-        //Is checked through own validation
-        val domainId: Long,
-        //Is checked through own validation
-        val taskClusterId: Long = 1,
-        //Is checked through own validation
-        var taskRevisionId: Long,
-        val competenceId: Long,
+        @get: Min(0) @get: Max(1)
         val coreCompetence: Int,
-        val functionProfileRevisionId: Long,
+        @get: Min(0) @get: Max(1)
         val coreTask: Int = 0,
+        @get: Min(0) @get: Max(1)
         val standardTask: Int = 0,
+        @get: Max(1000)
         val timeScore: Int = 0,
+        @get: Max(100)
+        val weight: Int,
+        @get: Max(1000)
         val taskGroup: Int? = null,
+        @get: Min(0) @get: Max(1)
+        val active: Int = 0,
         val resultAreaId: Int? = null,
-        var profileTaskId: Long? = null,
-        val weight: Int
+        val dot: String? = null
+
+
 ){
 
     override fun toString(): String {
