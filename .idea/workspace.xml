@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb283bf9-146e-416d-94c4-0faf2d2a426e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/TaskCluster.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/TaskClusterRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/TaskClusterService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/controller/TaskController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/controller/TaskController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/AddableTask.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/AddableTask.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/AddableTaskService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/AddableTaskService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/TaskRevisionService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/TaskRevisionService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/model/AddableTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/model/AddableTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/controller/TaskController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/controller/TaskController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/DomainTaskClusterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/DomainTaskClusterService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/ProfileTaskService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/ProfileTaskService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/TaskCompetenceMappingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/TaskCompetenceMappingService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/TaskRevisionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/TaskRevisionService.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -439,7 +436,7 @@
       <workItem from="1556876138984" duration="1492000" />
       <workItem from="1557134874026" duration="25035000" />
       <workItem from="1557220456211" duration="10019000" />
-      <workItem from="1557232363045" duration="12445000" />
+      <workItem from="1557232363045" duration="12742000" />
     </task>
     <task id="LOCAL-00001" summary="even more models!">
       <created>1557238582072</created>
@@ -462,11 +459,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557247413788</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="More validation">
+      <created>1557250289969</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1557250289969</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48991000" />
+    <option name="totallyTimeSpent" value="49288000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -513,7 +517,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="even more models!" />
     <MESSAGE value="Start with working validation on AddableTask" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start with working validation on AddableTask" />
+    <MESSAGE value="More validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="More validation" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/controller/TaskCompetenceMappingController.kt">
