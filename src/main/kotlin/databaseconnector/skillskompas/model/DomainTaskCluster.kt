@@ -11,6 +11,4 @@ data class DomainTaskCluster(
         val taskcluster_id: Long,
         val taskrevision_id: Long
 
-) {
-
-}
+)

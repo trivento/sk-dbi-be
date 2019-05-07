@@ -10,6 +10,4 @@ data class ProfileCompetence(
         val profiletask_id: Long,
         val competence_id: Long,
         val weight: Int
-) {
-
-}
+)

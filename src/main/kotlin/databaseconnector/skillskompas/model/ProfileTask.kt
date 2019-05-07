@@ -16,6 +16,4 @@ data class ProfileTask(
         val resultarea_id:Int?,
         val rank:Int?
 
-) {
-
-}
+)

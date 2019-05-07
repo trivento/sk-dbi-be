@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb283bf9-146e-416d-94c4-0faf2d2a426e" name="Default Changelist" comment="" />
+    <list default="true" id="eb283bf9-146e-416d-94c4-0faf2d2a426e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/Competence.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/Domain.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/CompetenceRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/DomainRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/AddableTaskService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/CompetenceService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/DomainService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/AddableTask.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/AddableTask.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/DomainTaskCluster.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/DomainTaskCluster.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/ProfileCompetence.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/ProfileCompetence.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/ProfileTask.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/ProfileTask.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/TaskCompetenceMapping.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/TaskCompetenceMapping.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/DomainTaskClusterRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/DomainTaskClusterRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/ProfileCompetenceRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/ProfileCompetenceRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/ProfileTaskRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/ProfileTaskRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/TaskCompetenceMappingRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/TaskCompetenceMappingRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/TaskRevisionRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/TaskRevisionRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/DomainTaskClusterService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/DomainTaskClusterService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/ProfileCompetenceService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/ProfileCompetenceService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/ProfileTaskService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/ProfileTaskService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/TaskCompetenceMappingService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/TaskCompetenceMappingService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/TaskRevisionService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/TaskRevisionService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/TaskService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/TaskService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/model/AddableTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/model/AddableTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/DomainTaskClusterService$getDomainTaskCluster$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/DomainTaskClusterService$getDomainTaskCluster$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/DomainTaskClusterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/DomainTaskClusterService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/ProfileCompetenceService$getProfileCompetence$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/ProfileCompetenceService$getProfileCompetence$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/ProfileCompetenceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/ProfileCompetenceService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/ProfileTaskService$getProfileTask$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/ProfileTaskService$getProfileTask$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/ProfileTaskService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/ProfileTaskService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/TaskCompetenceMappingService$getTaskCompetenceMapping$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/TaskCompetenceMappingService$getTaskCompetenceMapping$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/TaskCompetenceMappingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/TaskCompetenceMappingService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/TaskRevisionService$getTaskRevision$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/TaskRevisionService$getTaskRevision$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/TaskRevisionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/TaskRevisionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/TaskService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/databaseconnector/skillskompas/service/TaskService.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,6 +81,30 @@
         <item name="dbo: schema" type="2865ee2e:MsImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="local-db" type="feb32156:DbDataSourceImpl" />
+        <item name="marktmonitor-web: database" type="ccb7ac2a:MsImplModel$Database" />
+        <item name="dbo: schema" type="2865ee2e:MsImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="SK_COMPETENCE: table" type="63ab2ba1:MsImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="local-db" type="feb32156:DbDataSourceImpl" />
+        <item name="marktmonitor-web: database" type="ccb7ac2a:MsImplModel$Database" />
+        <item name="dbo: schema" type="2865ee2e:MsImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="SK_DOMAIN: table" type="63ab2ba1:MsImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="local-db" type="feb32156:DbDataSourceImpl" />
+        <item name="marktmonitor-web: database" type="ccb7ac2a:MsImplModel$Database" />
+        <item name="dbo: schema" type="2865ee2e:MsImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="SK_DOMAIN_TASK_CLUSTER: table" type="63ab2ba1:MsImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -53,69 +114,51 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/controller/TaskController.kt">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/TaskService.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+                <state relative-caret-position="285">
+                  <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/TaskService.kt">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/AddableTaskService.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="405">
-                  <caret line="27" column="68" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
+                <state relative-caret-position="270">
+                  <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
                   <folding>
-                    <element signature="e#47#212#0" expanded="true" />
+                    <element signature="e#48#211#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="das://5a4c1d9b-f4bd-439f-a950-8e51383f7427/database/marktmonitor-web/schema/dbo/table/SK_PROFILETASK">
-              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-                <state>
-                  <filtering enabled="true" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/TaskRevisionService.kt">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/CompetenceService.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="585">
-                  <caret line="44" column="56" selection-start-line="37" selection-start-column="7" selection-end-line="45" selection-end-column="9" />
+                <state relative-caret-position="150">
+                  <caret line="13" selection-start-line="13" selection-end-line="13" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/ProfileCompetenceService.kt">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/Competence.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="480">
-                  <caret line="37" column="60" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
+                <state relative-caret-position="180">
+                  <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="das://5a4c1d9b-f4bd-439f-a950-8e51383f7427/database/marktmonitor-web/schema/dbo/table/SK_PROFILECOMPETENCE">
-              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-                <state>
-                  <filtering enabled="true" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="das://5a4c1d9b-f4bd-439f-a950-8e51383f7427/database/marktmonitor-web/schema/dbo/table/SK_TASKCLUSTER">
-              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-                <state>
-                  <filtering enabled="true" />
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/TaskCompetenceMappingService.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="465">
+                  <caret line="37" column="83" selection-start-line="37" selection-start-column="72" selection-end-line="37" selection-end-column="83" />
                 </state>
               </provider>
             </entry>
@@ -125,67 +168,19 @@
       <split-second>
         <leaf>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/DomainTaskCluster.kt">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/Domain.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="30">
-                  <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/TaskCompetenceMapping.kt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="15" selection-start-line="15" selection-end-line="15" />
+                <state relative-caret-position="60">
+                  <caret line="4" selection-start-line="4" selection-end-line="16" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/AddableTask.kt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="585">
-                  <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
-                  <folding>
-                    <element signature="e#46#178#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/DomainTaskClusterService.kt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="75">
-                  <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/controller/ProfileTaskController.kt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/ProfileTaskService.kt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/TaskRevision.kt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="7" column="63" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="63" />
+            <entry file="das://5a4c1d9b-f4bd-439f-a950-8e51383f7427/database/marktmonitor-web/schema/dbo/table/SK_COMPETENCE">
+              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+                <state>
+                  <filtering enabled="true" />
                 </state>
               </provider>
             </entry>
@@ -203,9 +198,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>databaseconnector.skillskompas</find>
-      <find>databaseconnector.skillskompas.SkillskompasApplication</find>
-      <find>databaseconnector</find>
       <find>SkillskompasApplication</find>
       <find>custom</find>
       <find>task_revision</find>
@@ -233,6 +225,9 @@
       <find>SK_PROFILECOMPETENCE</find>
       <find>profiletaskid</find>
       <find>domainId</find>
+      <find>domainTaskClusterService</find>
+      <find>data</find>
+      <find>competenceId</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -248,9 +243,6 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/TaskRepository.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/SK_TASKREVISION.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/Sk_taskrevision.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/TaskRevisionRepository.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/TaskCompetenceMappingRepository.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/ProfileTaskRepository.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/controller/TaskRevision.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/controller/DomainTaskCluster.kt" />
         <option value="$PROJECT_DIR$/src/main/resources/configuration/SwaggerConfig.kt" />
@@ -259,26 +251,37 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/configuration/SwaggerConfig.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/SkillskompasApplication.kt" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/ProfileCompetenceRepository.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/DomainTaskClusterRepository.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/controller/ProfileCompetenceController.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/controller/DomainTaskClusterController.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/controller/ProfileTaskController.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/controller/TaskCompetenceMappingController.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/controller/TaskRevisionController.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/TaskRevision.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/ProfileTask.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/TaskCompetenceMapping.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/DomainTaskCluster.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/ProfileCompetence.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/ProfileCompetenceService.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/ProfileTaskService.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/TaskCompetenceMappingService.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/TaskRevision.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/TaskRevisionService.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/DomainTaskCluster.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/TaskCompetenceMapping.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/ProfileTask.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/ProfileCompetenceService.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/ProfileCompetence.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/AddibleTaskService.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/controller/TaskController.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/DomainTaskClusterService.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/TaskService.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/AddableTask.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/DomainTaskClusterService.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/TaskRevisionRepository.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/DomainTaskClusterRepository.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/ProfileCompetenceRepository.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/ProfileTaskRepository.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/TaskCompetenceMappingRepository.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/Domain.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/DomainRepository.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/DomainService.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/AddableTaskService.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/CompetenceRepository.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/Competence.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/CompetenceService.kt" />
       </list>
     </option>
   </component>
@@ -296,10 +299,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-636" />
-    <option name="y" value="-1417" />
-    <option name="width" value="2560" />
-    <option name="height" value="1417" />
+    <option name="x" value="-394" />
+    <option name="y" value="-960" />
+    <option name="width" value="1816" />
+    <option name="height" value="838" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -307,6 +310,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -392,12 +397,19 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="skillskompas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
+            <path>
+              <item name="skillskompas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -409,6 +421,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="kotlin" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/kotlin" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -419,7 +432,8 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas" />
       <recent name="$PROJECT_DIR$/src/main/kotlin" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -430,13 +444,12 @@
       <recent name="" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="databaseconnector.skillskompas.repository" />
       <recent name="databaseconnector.skillskompas.service" />
       <recent name="databaseconnector.skillskompas.controller" />
-      <recent name="databaseconnector.skillskompas.repository" />
       <recent name="databaseconnector.skillskompas.model" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/kotlin" />
     </key>
   </component>
@@ -500,14 +513,16 @@
       <workItem from="1556876138984" duration="1492000" />
       <workItem from="1557134874026" duration="25035000" />
       <workItem from="1557220456211" duration="10019000" />
+      <workItem from="1557232363045" duration="5648000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36546000" />
+    <option name="totallyTimeSpent" value="42194000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-636" y="-1417" width="2560" height="1417" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14019063" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -521,18 +536,18 @@
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Messages" order="2" sideWeight="0.4912629" weight="0.32981133" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.3299363" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.4912629" weight="0.33132076" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.4912629" visible="true" weight="0.33132076" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" />
-      <window_info anchor="bottom" id="Spring" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3299363" />
+      <window_info anchor="bottom" id="Spring" order="9" weight="0.32981133" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32981133" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5087371" side_tool="true" weight="0.33132076" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="15" visible="true" weight="0.32981133" />
+      <window_info anchor="bottom" id="Version Control" order="15" weight="0.32981133" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -549,14 +564,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/skillskompas/SkillskompasApplicationTests.kt" />
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/databaseconnector/skillskompas/SkillskompasApplicationTests.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.5.BUILD-SNAPSHOT/spring-boot-autoconfigure-2.1.5.BUILD-20190503.145658-28.jar!/org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -571,30 +578,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/TaskCompetenceMappingRepository.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="80" selection-start-line="8" selection-start-column="80" selection-end-line="8" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/TaskRevisionRepository.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-          <folding>
-            <element signature="e#51#214#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/ProfileTaskRepository.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
@@ -638,34 +621,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/ProfileCompetenceRepository.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="9" column="72" selection-start-line="9" selection-start-column="72" selection-end-line="9" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/controller/TaskRevisionController.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/DomainTaskClusterRepository.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/controller/ProfileCompetenceController.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-end-line="14" />
-          <folding>
-            <element signature="e#51#309#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -679,16 +638,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/controller/DomainTaskClusterController.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding>
-            <element signature="e#51#309#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://5a4c1d9b-f4bd-439f-a950-8e51383f7427/database/marktmonitor-web/schema/dbo/table/SK_DOMAIN_TASK_CLUSTER">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -696,63 +645,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://5a4c1d9b-f4bd-439f-a950-8e51383f7427/database/marktmonitor-web/schema/dbo/table/SK_DOMAIN">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/TaskRevision.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="63" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://5a4c1d9b-f4bd-439f-a950-8e51383f7427/database/marktmonitor-web/schema/dbo/table/SK_COMPETENCE">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/TaskCompetenceMapping.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://5a4c1d9b-f4bd-439f-a950-8e51383f7427/database/marktmonitor-web/schema/dbo/table/SK_TASKREVISION">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://5a4c1d9b-f4bd-439f-a950-8e51383f7427/database/marktmonitor-web/schema/dbo/table/SK_TASKCLUSTER">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://5a4c1d9b-f4bd-439f-a950-8e51383f7427/database/marktmonitor-web/schema/dbo/table/SK_PROFILECOMPETENCE">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/ProfileCompetence.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://5a4c1d9b-f4bd-439f-a950-8e51383f7427/database/marktmonitor-web/schema/dbo/table/SK_PROFILETASK">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -766,52 +659,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/controller/TaskController.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+    <entry file="das://5a4c1d9b-f4bd-439f-a950-8e51383f7427/database/marktmonitor-web/schema/dbo/table/SK_FUNCTIONPROFILEREVISION">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.6.RELEASE/spring-data-commons-2.1.6.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
+    <entry file="das://5a4c1d9b-f4bd-439f-a950-8e51383f7427/database/marktmonitor-web/schema/dbo/table/SK_PROFILETASK">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://5a4c1d9b-f4bd-439f-a950-8e51383f7427/database/marktmonitor-web/schema/dbo/table/SK_PROFILECOMPETENCE">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://5a4c1d9b-f4bd-439f-a950-8e51383f7427/database/marktmonitor-web/schema/dbo/table/SK_TASKCLUSTER">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/ProfileCompetence.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="62" column="12" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
+        <state relative-caret-position="180">
+          <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/TaskCompetenceMapping.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/DomainTaskCluster.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+        <state relative-caret-position="195">
+          <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/ProfileCompetenceService.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="37" column="60" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
+        <state relative-caret-position="60">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/TaskRevisionService.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="44" column="56" selection-start-line="37" selection-start-column="7" selection-end-line="45" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/TaskCompetenceMappingService.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+        <state relative-caret-position="60">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/ProfileTaskService.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        <state relative-caret-position="60">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -822,44 +736,193 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://5a4c1d9b-f4bd-439f-a950-8e51383f7427/database/marktmonitor-web/schema/dbo/table/SK_FUNCTIONPROFILEREVISION">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.kts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/TaskRevision.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="63" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.6.RELEASE/spring-data-commons-2.1.6.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="62" column="12" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/controller/ProfileCompetenceController.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/controller/TaskController.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/DomainTaskClusterRepository.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="79" selection-start-line="8" selection-start-column="79" selection-end-line="8" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/ProfileCompetenceRepository.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="9" column="79" selection-start-line="9" selection-start-column="79" selection-end-line="9" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/ProfileTaskRepository.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/TaskRevisionRepository.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="71" selection-start-line="7" selection-start-column="71" selection-end-line="7" selection-end-column="71" />
+          <folding>
+            <element signature="e#51#214#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/TaskCompetenceMappingRepository.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="88" selection-start-line="8" selection-start-column="88" selection-end-line="8" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/controller/DomainTaskClusterController.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://5a4c1d9b-f4bd-439f-a950-8e51383f7427/database/marktmonitor-web/schema/dbo/table/SK_MATCHBOX_SECTOR">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/ProfileTask.kt">
+    <entry file="das://5a4c1d9b-f4bd-439f-a950-8e51383f7427/database/marktmonitor-web/schema/dbo/table/SK_DOMAIN">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/TaskCompetenceMappingService.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="465">
+          <caret line="37" column="83" selection-start-line="37" selection-start-column="72" selection-end-line="37" selection-end-column="83" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/DomainTaskClusterService.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        <state relative-caret-position="600">
+          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+          <folding>
+            <element signature="e#48#397#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/TaskService.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/ProfileTask.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="68" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
+        <state relative-caret-position="285">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/DomainRepository.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/Domain.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://5a4c1d9b-f4bd-439f-a950-8e51383f7427/database/marktmonitor-web/schema/dbo/table/SK_COMPETENCE">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/repository/CompetenceRepository.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/DomainService.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
           <folding>
-            <element signature="e#47#212#0" expanded="true" />
+            <element signature="e#48#221#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/AddableTask.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="30">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/model/Competence.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/TaskService.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/AddableTaskService.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
           <folding>
-            <element signature="e#46#178#0" expanded="true" />
+            <element signature="e#48#211#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/databaseconnector/skillskompas/service/CompetenceService.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>

@@ -6,9 +6,4 @@ import org.springframework.stereotype.Repository
 import databaseconnector.skillskompas.model.TaskRevision
 
 @Repository
-interface DomainTaskClusterRepository : CrudRepository<DomainTaskCluster, Long> {
-
-
-
-}
-
+interface DomainTaskClusterRepository : CrudRepository<DomainTaskCluster, Long>

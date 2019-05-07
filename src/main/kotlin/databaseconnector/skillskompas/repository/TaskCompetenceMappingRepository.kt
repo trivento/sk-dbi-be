@@ -6,7 +6,4 @@ import org.springframework.stereotype.Repository
 import databaseconnector.skillskompas.model.TaskRevision
 
 @Repository
-interface TaskCompetenceMappingRepository : CrudRepository<TaskCompetenceMapping, Long> {
-
-}
-
+interface TaskCompetenceMappingRepository : CrudRepository<TaskCompetenceMapping, Long>

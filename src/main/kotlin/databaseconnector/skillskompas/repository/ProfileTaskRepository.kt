@@ -7,9 +7,5 @@ import org.springframework.stereotype.Repository
 import databaseconnector.skillskompas.model.TaskRevision
 
 @Repository
-interface ProfileTaskRepository : CrudRepository<ProfileTask, Long> {
-
-
-
-}
+interface ProfileTaskRepository : CrudRepository<ProfileTask, Long>
 

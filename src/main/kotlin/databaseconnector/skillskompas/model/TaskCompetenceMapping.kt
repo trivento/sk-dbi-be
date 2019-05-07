@@ -10,6 +10,4 @@ data class TaskCompetenceMapping(
         val taskrevision_id: Long,
         val competence_id: Long,
         val core_competence: Int
-){
-
-}
+)

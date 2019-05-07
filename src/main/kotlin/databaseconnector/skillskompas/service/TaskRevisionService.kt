@@ -6,8 +6,9 @@ import databaseconnector.skillskompas.repository.TaskRevisionRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Component
+import org.springframework.stereotype.Service
 
-@Component
+@Service
 class TaskRevisionService {
     @Autowired
     lateinit var taskRevisionRepository: TaskRevisionRepository

@@ -1,9 +1,6 @@
 package databaseconnector.skillskompas.model
 
-import databaseconnector.skillskompas.service.DomainTaskClusterService
-import org.springframework.beans.factory.annotation.Autowired
-
- class AddableTask (
+class AddableTask (
         val displayName: String,
         val dot: String? = null,
         val rank: Int = 1000,
@@ -25,15 +22,5 @@ import org.springframework.beans.factory.annotation.Autowired
         var profileTaskId: Long? = null,
         val weight: Int
 )
-{
-        @Autowired
-        private lateinit var domainTaskClusterService: DomainTaskClusterService
-
-        fun validate(): Boolean {
-                println(domainTaskClusterService.validateDomainId(this.domainId))
-
-                return true
-        }
-}
 
 

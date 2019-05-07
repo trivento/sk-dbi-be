@@ -5,18 +5,15 @@ import databaseconnector.skillskompas.model.DomainTaskCluster
 import databaseconnector.skillskompas.repository.DomainTaskClusterRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
-import org.springframework.stereotype.Component
+import org.springframework.stereotype.Service
 
-@Component
+@Service
 class DomainTaskClusterService {
     @Autowired
     lateinit var domainTaskClusterRepository: DomainTaskClusterRepository
 
     fun addDomainTaskCluster(domaintTaskCluster: DomainTaskCluster): DomainTaskCluster {
         return domainTaskClusterRepository.save(domaintTaskCluster)
-    }
-    fun addDomainTaskCluster(addableTask: AddableTask): DomainTaskCluster {
-        return addDomainTaskCluster(createDomainTaskClusterFromAddableTask(addableTask))
     }
 
     fun getDomainTaskCluster(domaintTaskClusterId :Long): ResponseEntity<DomainTaskCluster>? {
@@ -41,7 +38,7 @@ class DomainTaskClusterService {
             )
     }
 
-    fun validateDomainId(domainId: Long):Boolean {
+    fun validateDomainId(domainId: Long): Boolean {
         return domainTaskClusterRepository.existsById(domainId)
     }
 }
