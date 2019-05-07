@@ -19,7 +19,7 @@ class TaskService{
     lateinit var addibleTaskService: AddableTaskService
 
     fun addTask(addableTask: AddableTask) {
-        addibleTaskService.validate(addableTask)
+        println(addibleTaskService.validate(addableTask))
 //            val taskRevision = taskRevisionService.addTaskRevision(addableTask)
 //            addableTask.taskRevisionId = taskRevision.taskrevision_id
 //            domainTaskClusterService.addDomainTaskCluster(addableTask)

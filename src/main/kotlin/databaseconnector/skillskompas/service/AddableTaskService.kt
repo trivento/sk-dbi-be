@@ -12,11 +12,19 @@ class AddableTaskService {
     @Autowired
     lateinit var competenceService: CompetenceService
 
-    fun validate(addableTask: AddableTask) {
+    fun validate(addableTask: AddableTask):Boolean {
         //Check if domainId exists
-        domainService.validateDomainId(addableTask.domainId)
+        if(!domainService.validateDomainId(addableTask.domainId)){
+            return false
+        }
         //Check if competenceId exists
-        competenceService.validateCompetenceId(addableTask.competenceId)
-
+        if(!competenceService.validateCompetenceId(addableTask.competenceId)){
+            return false
+        }
+        //Check if coreCompetence is 1 or 0
+        if(addableTask.coreCompetence != 0 && addableTask.coreCompetence != 1){
+            return false
+        }
+        return true
     }
 }
