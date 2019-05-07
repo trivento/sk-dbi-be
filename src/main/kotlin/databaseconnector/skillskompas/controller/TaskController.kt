@@ -19,7 +19,6 @@ class TaskController {
 
     @PostMapping("/addtask")
     fun addTask(@Valid @RequestBody addableTask: AddableTask){
-        println(addableTask)
         taskService.addTask(addableTask)
     }
 }

@@ -1,24 +1,27 @@
 package databaseconnector.skillskompas.model
 
-import javax.validation.constraints.Min
-import javax.validation.constraints.NotBlank
-import javax.validation.constraints.NotEmpty
-import javax.validation.constraints.NotNull
+import javax.validation.constraints.*
 
 
 class AddableTask (
-        @get: NotNull @get: NotEmpty @get: NotBlank
+        @get: NotNull @get: NotEmpty @get: NotBlank @get: Size(min = 10)
         val displayName: String,
         val dot: String? = null,
+        @get: Max( 2000)
         val rank: Int = 1000,
         val active: Int = 0,
-        @get: Min(4)
+        @get: Min(0)
         val solverMinTime: Int = 1,
+        @get: Max(120)
         val solverMaxTime: Int = 80,
+        @get: Min(0) @get: Max(1)
         val revision: Int = 1,
+        //Is checked through own validation
         val domainId: Long,
+        //Is checked through own validation
         val taskClusterId: Long = 1,
-        var taskRevisionId: Long? = null,
+        //Is checked through own validation
+        var taskRevisionId: Long,
         val competenceId: Long,
         val coreCompetence: Int,
         val functionProfileRevisionId: Long,
