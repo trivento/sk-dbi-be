@@ -1,13 +1,13 @@
 package databaseconnector.skillskompas.model
 
-import javax.persistence.Entity
-import javax.persistence.Id
 import javax.validation.constraints.Min
+import javax.validation.constraints.NotBlank
+import javax.validation.constraints.NotEmpty
+import javax.validation.constraints.NotNull
 
-@Entity
+
 class AddableTask (
-        @Id
-        val id: Long,
+        @get: NotNull @get: NotEmpty @get: NotBlank
         val displayName: String,
         val dot: String? = null,
         val rank: Int = 1000,
