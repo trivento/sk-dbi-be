@@ -1,21 +1,29 @@
 package databaseconnector.skillskompas.model
 
+import databaseconnector.skillskompas.validation.IsValidCompetenceIdValidator
+import databaseconnector.skillskompas.validation.IsValidDomainIdValidator
+import databaseconnector.skillskompas.validation.IsValidFunctionProfileRevisionIdValidator
+import databaseconnector.skillskompas.validation.IsValidTaskClusterIdValidator
 import javax.validation.constraints.*
 
 
 class AddableTask (
-        //TODO create check
-        var profileTaskId: Long? = null,
-        //TODO create check
+        //Is checked through own validation
+        @get: IsValidFunctionProfileRevisionIdValidator
         val functionProfileRevisionId: Long,
         //Is checked through own validation
+        @get: IsValidDomainIdValidator
         val domainId: Long,
         //Is checked through own validation
-        val taskClusterId: Long = 1,
+        @get: IsValidTaskClusterIdValidator
+        val taskClusterId: Long,
         //Is checked through own validation
+        @get: IsValidCompetenceIdValidator
         val competenceId: Long,
         //Should exist because we create this when adding a task
         var taskRevisionId: Long?,
+        //Should exist because we create this when adding a task
+        var profileTaskId: Long? = null,
         @get: NotNull @get: Size(min = 10)
         val displayName: String,
         @get: Max( 2000)

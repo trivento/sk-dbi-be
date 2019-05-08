@@ -46,9 +46,5 @@ class TaskRevisionService {
                 solverMaxTime =addableTask.solverMaxTime
         )
     }
-
-    fun validateTaskRevisionId(taskRevisionId: Long): Boolean {
-        return taskRevisionRepository.existsById(taskRevisionId)
-    }
 }
 

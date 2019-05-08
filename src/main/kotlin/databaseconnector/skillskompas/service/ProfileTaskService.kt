@@ -5,7 +5,6 @@ import databaseconnector.skillskompas.model.ProfileTask
 import databaseconnector.skillskompas.repository.ProfileTaskRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
-import org.springframework.stereotype.Component
 import org.springframework.stereotype.Service
 
 @Service
@@ -19,13 +18,11 @@ class ProfileTaskService {
     fun addProfileTask(addableTask: AddableTask): ProfileTask {
         return addProfileTask(createProfileTaskFromAddableTask(addableTask))
     }
-
     fun getProfileTask(profileTaskId:Long): ResponseEntity<ProfileTask>? {
         return profileTaskRepository.findById(profileTaskId)
                 .map {source -> ResponseEntity.ok(source)}
                 .orElse(ResponseEntity.notFound().build())
     }
-
     fun removeProfileTask(profileTaskId: Long) {
         return profileTaskRepository.deleteById(profileTaskId)
     }
