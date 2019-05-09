@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="local-db" uuid="5a4c1d9b-f4bd-439f-a950-8e51383f7427">
+    <data-source source="LOCAL" name="marktmonitor-web@boot2docker" uuid="0eaf23be-6a96-4967-90fa-9e798cd24d70">
       <driver-ref>sqlserver.ms</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://boot2docker\marktmonitor-web:1433;database=marktmonitor-web</jdbc-url>
+      <jdbc-url>jdbc:sqlserver://boot2docker;databaseName=marktmonitor-web</jdbc-url>
       <driver-properties>
         <property name="applicationName" value="DataGrip" />
       </driver-properties>
