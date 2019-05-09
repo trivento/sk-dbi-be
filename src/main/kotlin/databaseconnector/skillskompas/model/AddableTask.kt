@@ -8,21 +8,15 @@ import javax.validation.constraints.*
 
 
 class AddableTask (
-        //Is checked through own validation
         @get: IsValidFunctionProfileRevisionIdValidator
         val functionProfileRevisionId: Long,
-        //Is checked through own validation
         @get: IsValidDomainIdValidator
         val domainId: Long,
-        //Is checked through own validation
         @get: IsValidTaskClusterIdValidator
         val taskClusterId: Long,
-        //Is checked through own validation
         @get: IsValidCompetenceIdValidator
         val competenceId: Long,
-        //Should exist because we create this when adding a task
         var taskRevisionId: Long?,
-        //Should exist because we create this when adding a task
         var profileTaskId: Long? = null,
         @get: NotNull @get: Size(min = 10)
         val displayName: String,
@@ -53,7 +47,6 @@ class AddableTask (
 
 
 ){
-
     override fun toString(): String {
         return(
                 "displayName = ${displayName}" +

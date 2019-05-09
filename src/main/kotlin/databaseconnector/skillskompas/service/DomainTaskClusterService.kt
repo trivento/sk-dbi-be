@@ -16,6 +16,10 @@ class DomainTaskClusterService {
         return domainTaskClusterRepository.save(domaintTaskCluster)
     }
 
+    fun addDomainTaskCluster(addableTask: AddableTask):DomainTaskCluster{
+        return addDomainTaskCluster(createDomainTaskClusterFromAddableTask(addableTask))
+    }
+
     fun getDomainTaskCluster(domaintTaskClusterId :Long): ResponseEntity<DomainTaskCluster>? {
         return domainTaskClusterRepository.findById(domaintTaskClusterId)
                 .map {source -> ResponseEntity.ok(source)}
@@ -36,10 +40,6 @@ class DomainTaskClusterService {
                 taskcluster_id = addableTask.taskClusterId,
                 taskrevision_id = addableTask.taskRevisionId!!
             )
-    }
-
-    fun validateDomainId(domainId: Long): Boolean {
-        return domainTaskClusterRepository.existsById(domainId)
     }
 }
 
