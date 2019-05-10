@@ -10,7 +10,7 @@ import kotlin.reflect.KClass
 @Target(allowedTargets = [PROPERTY_GETTER])
 @Retention(AnnotationRetention.RUNTIME)
 annotation class IsValidTaskClusterIdValidator(
-        val message: String = "TaskClusterId does not exist",
+        val message: String = "This TaskClusterId does not exist",
         val groups: Array<KClass<out Any>> = [],
         val payload: Array<KClass<out Payload>> = []
 )
@@ -20,7 +20,7 @@ annotation class IsValidTaskClusterIdValidator(
 @Target(allowedTargets = [PROPERTY_GETTER])
 @Retention(AnnotationRetention.RUNTIME)
 annotation class IsValidDomainIdValidator(
-        val message: String = "DomainId does not exist",
+        val message: String = "This DomainId does not exist",
         val groups: Array<KClass<out Any>> = [],
         val payload: Array<KClass<out Payload>> = []
 )
@@ -30,7 +30,7 @@ annotation class IsValidDomainIdValidator(
 @Target(allowedTargets = [PROPERTY_GETTER])
 @Retention(AnnotationRetention.RUNTIME)
 annotation class IsValidCompetenceIdValidator(
-        val message: String = "CompetenceId does not exist",
+        val message: String = "This CompetenceId does not exist",
         val groups: Array<KClass<out Any>> = [],
         val payload: Array<KClass<out Payload>> = []
 )
@@ -40,7 +40,7 @@ annotation class IsValidCompetenceIdValidator(
 @Target(allowedTargets = [PROPERTY_GETTER])
 @Retention(AnnotationRetention.RUNTIME)
 annotation class IsValidFunctionProfileRevisionIdValidator(
-        val message: String = "FunctionProfileRevisionId does not exist",
+        val message: String = "This FunctionProfileRevisionId does not exist",
         val groups: Array<KClass<out Any>> = [],
         val payload: Array<KClass<out Payload>> = []
 )
