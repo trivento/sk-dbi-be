@@ -1,5 +1,6 @@
 package databaseconnector.skillskompas.service
 import databaseconnector.skillskompas.model.AddableTask
+import databaseconnector.skillskompas.model.TaskRevision
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
@@ -25,6 +26,15 @@ class TaskService{
             val profileTask = profileTaskService.addProfileTask(addableTask)
             addableTask.profileTaskId = profileTask.profiletask_id
             profileCompetenceService.addProfileCompetence(addableTask)
-            println(addableTask.toString())
+            activateTask(taskRevision.taskrevision_id)
+    }
+
+    fun activateTask(taskRevisionId: Long){
+        return taskRevisionService.activateTask(taskRevisionId)
+    }
+
+    fun deactivateTask(taskRevisionId: Long) {
+        return taskRevisionService.decativateTask(taskRevisionId)
+
     }
 }

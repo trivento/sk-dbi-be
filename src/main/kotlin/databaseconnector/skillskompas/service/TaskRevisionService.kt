@@ -5,7 +5,6 @@ import databaseconnector.skillskompas.model.TaskRevision
 import databaseconnector.skillskompas.repository.TaskRevisionRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
-import org.springframework.stereotype.Component
 import org.springframework.stereotype.Service
 
 @Service
@@ -35,6 +34,7 @@ class TaskRevisionService {
         return taskRevisionRepository.findAll()
     }
 
+
     private fun createTaskRevisionFromAddableTask(addableTask: AddableTask): TaskRevision {
         return TaskRevision(
                 revision =  addableTask.revision,
@@ -46,5 +46,17 @@ class TaskRevisionService {
                 solverMaxTime =addableTask.solverMaxTime
         )
     }
+
+    fun decativateTask(taskRevisionId: Long) {
+        return taskRevisionRepository.deactivateTask(taskRevisionId)
+
+    }
+
+    fun activateTask(taskRevisionId: Long) {
+        return taskRevisionRepository.activateTask(taskRevisionId)
+    }
+
+
+
 }
 
