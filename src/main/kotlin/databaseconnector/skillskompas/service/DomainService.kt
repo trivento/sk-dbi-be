@@ -12,4 +12,6 @@ class DomainService {
     fun validateDomainId(domainId: Long): Boolean {
         return domainRepository.existsById(domainId)
     }
+
+
 }

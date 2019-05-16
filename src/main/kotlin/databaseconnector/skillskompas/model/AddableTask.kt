@@ -18,7 +18,7 @@ class AddableTask (
         val competenceId: Long,
         var taskRevisionId: Long?,
         var profileTaskId: Long? = null,
-        @get: NotNull @get: Size(min = 10, message="A task should be at least 10 characters long")
+        @get: NotNull @get: Size(min = 10, message= "A task should be at least 10 characters long")
         val displayName: String,
         @get: Max(2000, message = "The max value of rank can be 2000")
         val rank: Int = 1000,
@@ -40,7 +40,7 @@ class AddableTask (
         val weight: Int,
         @get: Max(1000)
         val taskGroup: Int? = null,
-        @get: Min(0, message="A task can only be active (1) or inactive (0)") @get: Max(1,message="A task can only be active (1) or inactive (0)")
+        @get: Min(0, message= "A task can only be active (1) or inactive (0)") @get: Max(1,message="A task can only be active (1) or inactive (0)")
         val active: Int = 0,
         val resultAreaId: Int? = null,
         val dot: String? = null
