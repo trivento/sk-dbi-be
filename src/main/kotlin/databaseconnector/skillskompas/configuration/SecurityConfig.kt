@@ -32,9 +32,9 @@ class SecurityConfig(
                 .forRS256(apiAudience, issuer)
                 .configure(http)
                 .authorizeRequests()
-                .antMatchers(HttpMethod.GET, "/api/public").permitAll()
-                .antMatchers(HttpMethod.POST, "/api/task/addtask").authenticated()
-                .antMatchers(HttpMethod.GET, "/api/private-scoped").hasAuthority("read:messages")
+//                .antMatchers(HttpMethod.PUT, "/api/task/activatetask").permitAll()
+                .antMatchers(HttpMethod.POST, "/api/**").authenticated()
+//                .antMatchers(HttpMethod.GET, "/api/task/activatetask").hasAuthority("read:messages")
     }
 
 
