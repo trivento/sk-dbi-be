@@ -4,3 +4,5 @@ target
 target/
 out/
 .idea/
+workspace.xml
+workspace.*
