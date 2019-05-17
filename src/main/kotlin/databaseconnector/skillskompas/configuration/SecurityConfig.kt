@@ -33,8 +33,12 @@ class SecurityConfig(
                 .configure(http)
                 .authorizeRequests()
 //                .antMatchers(HttpMethod.PUT, "/api/task/activatetask").permitAll()
-                .antMatchers(HttpMethod.POST, "/api/**").authenticated()
-//                .antMatchers(HttpMethod.GET, "/api/task/activatetask").hasAuthority("read:messages")
+//                .antMatchers(HttpMethod.POST, "/api/**").authenticated()
+//                .antMatchers(HttpMethod.GET, "/api/**").authenticated()
+//                .antMatchers(HttpMethod.GET, "/api/**").hasRole("Admin")
+//                .antMatchers(HttpMethod.POST, "/api/**").hasRole("Admin")
+                .antMatchers(HttpMethod.POST, "/api/**").hasAuthority("Admin")
+                .antMatchers(HttpMethod.POST, "/api/**").hasAuthority("Admin")
     }
 
 
