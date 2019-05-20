@@ -1,6 +1,6 @@
 package databaseconnector.skillskompas.model
 
-data class AddableTaskConstraints(
+data class Property(
         val type: Type,
         val label: String,
         val defaultValue: Long?,

@@ -5,6 +5,8 @@ import databaseconnector.skillskompas.validation.IsValidDomainIdValidator
 import databaseconnector.skillskompas.validation.IsValidFunctionProfileRevisionIdValidator
 import databaseconnector.skillskompas.validation.IsValidTaskClusterIdValidator
 import javax.validation.constraints.*
+import kotlin.reflect.KProperty1
+import kotlin.reflect.full.declaredMemberProperties
 
 
 class AddableTask (
@@ -71,6 +73,9 @@ class AddableTask (
                 "\nweight = ${weight}"
         )
     }
+        fun getStandardValues(): Collection<KProperty1<out AddableTask, Any?>> {
+                return this::class.declaredMemberProperties
+        }
 }
 
 

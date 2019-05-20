@@ -1,9 +1,6 @@
 package databaseconnector.skillskompas.controller
 
 import databaseconnector.skillskompas.model.AddableTask
-import databaseconnector.skillskompas.model.AddableTaskConstraints
-import databaseconnector.skillskompas.model.Constraint
-import databaseconnector.skillskompas.model.Type
 import databaseconnector.skillskompas.service.TaskService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*

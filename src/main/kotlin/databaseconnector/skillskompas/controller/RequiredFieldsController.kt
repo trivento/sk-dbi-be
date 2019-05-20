@@ -1,23 +1,20 @@
 package databaseconnector.skillskompas.controller
 
-import databaseconnector.skillskompas.model.AddableTaskConstraints
+import databaseconnector.skillskompas.model.Property
 import databaseconnector.skillskompas.service.RequiredFieldService
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RequestParam
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 import javax.validation.Valid
 
 @RestController
-@RequestMapping("/fields")
+@RequestMapping("/api/fields")
 
 class RequiredFieldsController {
     @Autowired
     lateinit var requiredFieldService: RequiredFieldService
 
     @GetMapping("/{name}")
-    fun getFields(@Valid @RequestParam (name = "name") name:String): List<AddableTaskConstraints> {
+    fun getFields(@Valid @PathVariable (value = "name") name:String): List<Property> {
         return requiredFieldService.getRequiredFields(name)
     }
 }
