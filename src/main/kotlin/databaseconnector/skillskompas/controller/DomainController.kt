@@ -1,14 +1,10 @@
 package databaseconnector.skillskompas.controller
 
 import databaseconnector.skillskompas.model.Domain
-import databaseconnector.skillskompas.model.DomainTaskCluster
-import databaseconnector.skillskompas.repository.DomainRepository
 import databaseconnector.skillskompas.service.DomainService
-import databaseconnector.skillskompas.service.DomainTaskClusterService
+import databaseconnector.skillskompas.service.RequiredFieldService
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
-import javax.validation.Valid
 
 
 @RestController

@@ -1,9 +1,6 @@
 package databaseconnector.skillskompas.validation
 
-import databaseconnector.skillskompas.service.CompetenceService
-import databaseconnector.skillskompas.service.DomainService
-import databaseconnector.skillskompas.service.FunctionProfileRevisionService
-import databaseconnector.skillskompas.service.TaskClusterService
+import databaseconnector.skillskompas.service.*
 import org.springframework.beans.factory.annotation.Autowired
 import javax.validation.ConstraintValidator
 import javax.validation.ConstraintValidatorContext
