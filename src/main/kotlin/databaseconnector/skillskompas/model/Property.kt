@@ -7,7 +7,6 @@ data class Property(
         val constraints: MutableMap<String,Int>?
 )
 
-
 enum class Type {
     TEXT, NUM, CATEGORY, UNKNOWN
 }
