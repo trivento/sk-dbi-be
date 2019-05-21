@@ -3,7 +3,9 @@ import databaseconnector.skillskompas.model.*
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import kotlin.reflect.full.declaredMemberProperties
-import kotlin.reflect.full.valueParameters
+import java.util.LinkedList
+import java.util.regex.Pattern
+
 
 @Service
 class TaskService{
@@ -40,57 +42,70 @@ class TaskService{
     }
 
     fun getRequiredFieldsForTask(): List<Property> {
-        var listOfProperties: MutableList<Property> = mutableListOf()
+        val listOfProperties: MutableList<Property> = mutableListOf()
         for (memberProperty in AddableTask::class.declaredMemberProperties) {
-            println(memberProperty.name)
-            println(memberProperty.getter.annotations)
-            for (sub in memberProperty.getter.annotations) {
-                when (sub.annotationClass.simpleName){
-                    "Max" -> println(sub.annotationClass.simpleName)
-                    "Min" -> println(sub.annotationClass.simpleName)
-                    "NotNull" -> println(sub.annotationClass.simpleName)
-                    "Size" -> println(sub.annotationClass.simpleName)
-                }
-                println(memberProperty)
+            val name = memberProperty.name
+            val type: Type = when {
+                memberProperty.getter.returnType.toString().contains("Int")->  Type.NUM
+                memberProperty.getter.returnType.toString().contains("Long")-> Type.NUM
+                memberProperty.getter.returnType.toString().contains("String")-> Type.TEXT
+                memberProperty.getter.returnType.toString().contains("Enum")-> Type.CATEGORY
+                else -> Type.UNKNOWN
             }
+
+            val constraint = Constraint(null,null,null,null)
+            for (sub in memberProperty.getter.annotations) {
+                when (sub.annotationClass.simpleName) {
+                    "Max" -> constraint.maxValue = getMinOrMaxValue(sub)
+                    "Min" -> constraint.minValue = getMinOrMaxValue(sub)
+                    "Size" -> constraint.minLength = getMinSizeValue(sub)
+                }
+            }
+            val property = Property(
+                    type = type,
+                    label = name,
+                    defaultValue = getStandardValues().get(name),
+                    takeDefaultIfUndefined = true,
+                    constraints = constraint
+            )
+            listOfProperties.add(property)
         }
-
         return listOfProperties
-//            listOfProperties.add(
-//                    Property(
-//                            label = memberProperty.name,
-//                            type = memberProperty
-//                    )
-//            )
-//            println(memberProperty.name)
-
-
-
-//        return listOf(Property(
-//                type = Type.TEXT,
-//                label = "A text field",
-//                defaultValue = null,
-//                takeDefaultIfUndefined = true,
-//                constraints = Constraint(
-//                        minValue = 1,
-//                        maxValue = 3,
-//                        minLength = 3,
-//                        mustBeInValues = true
-//                )
-//        ),
-//                Property(
-//                        type = Type.CATEGORIE,
-//                        label = "A balbalbal",
-//                        defaultValue = 10,
-//                        takeDefaultIfUndefined = true,
-//                        constraints = Constraint(
-//                                minValue = 0,
-//                                maxValue = 10,
-//                                minLength = null,
-//                                mustBeInValues = false
-//                        )
-//
-//                )
-//        )
     }
+
+    private fun getMinSizeValue(annotation: Annotation): Int {
+        val values = LinkedList<String>()
+        val p = Pattern.compile("min=\\d+")
+        val m = p.matcher(annotation.toString())
+        while (m.find()) {
+            values.add(m.group())
+        }
+        return values.last.substringAfter("=").toInt()
+    }
+
+    private fun getMinOrMaxValue(annotation: Annotation): Int {
+        val values = LinkedList<String>()
+        val p = Pattern.compile("value=\\d+")
+        val m = p.matcher(annotation.toString())
+        while (m.find()) {
+            values.add(m.group())
+        }
+        return values.last.substringAfter("=").toInt()
+    }
+
+    fun getStandardValues() = mapOf(
+            "rank" to 1000,
+            "solverMinTime" to 1,
+            "solverMaxTime" to 80,
+            "revision" to 1,
+            "coreCompetence" to 1,
+            "coreTask" to 0,
+            "standardTask" to 0,
+            "timeScore" to 0,
+            "weight" to 1,
+            "taskGroup" to null,
+            "active" to 0,
+            "resultAreaId" to null
+    )
+
 }
