@@ -76,5 +76,22 @@ class AddableTask (
 
 }
 
+fun getStandardValues() = mapOf(
+        "dot" to "",
+        "rank" to 1000,
+        "solverMinTime" to 1,
+        "solverMaxTime" to 80,
+        "revision" to 1,
+        "coreCompetence" to 1,
+        "coreTask" to 0,
+        "standardTask" to 0,
+        "timeScore" to 0,
+        "weight" to 1,
+        "taskGroup" to null,
+        "active" to 0,
+        "resultAreaId" to null
+)
+
+
 
 

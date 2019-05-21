@@ -53,20 +53,19 @@ class TaskService{
                 else -> Type.UNKNOWN
             }
 
-            val constraint = Constraint(null,null,null,null)
+            val constraints: MutableMap<String,Int> = mutableMapOf()
             for (sub in memberProperty.getter.annotations) {
                 when (sub.annotationClass.simpleName) {
-                    "Max" -> constraint.maxValue = getMinOrMaxValue(sub)
-                    "Min" -> constraint.minValue = getMinOrMaxValue(sub)
-                    "Size" -> constraint.minLength = getMinSizeValue(sub)
+                    "Max" -> constraints["maxValue"] = getMinOrMaxValue(sub)
+                    "Min" -> constraints["minValue"] = getMinOrMaxValue(sub)
+                    "Size" -> constraints["minLength"] = getMinSizeValue(sub)
                 }
             }
             val property = Property(
                     type = type,
                     label = name,
                     defaultValue = getStandardValues().get(name),
-                    takeDefaultIfUndefined = true,
-                    constraints = constraint
+                    constraints = if(constraints.isNotEmpty()){ constraints } else {null}
             )
             listOfProperties.add(property)
         }
@@ -92,20 +91,5 @@ class TaskService{
         }
         return values.last.substringAfter("=").toInt()
     }
-
-    fun getStandardValues() = mapOf(
-            "rank" to 1000,
-            "solverMinTime" to 1,
-            "solverMaxTime" to 80,
-            "revision" to 1,
-            "coreCompetence" to 1,
-            "coreTask" to 0,
-            "standardTask" to 0,
-            "timeScore" to 0,
-            "weight" to 1,
-            "taskGroup" to null,
-            "active" to 0,
-            "resultAreaId" to null
-    )
 
 }
