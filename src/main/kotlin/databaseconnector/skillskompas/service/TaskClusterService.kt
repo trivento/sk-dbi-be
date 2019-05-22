@@ -1,6 +1,5 @@
 package databaseconnector.skillskompas.service
 
-import databaseconnector.skillskompas.controller.dto.taskcluster.TaskClusterDTO
 import databaseconnector.skillskompas.controller.dto.toKeyValue
 import databaseconnector.skillskompas.repository.TaskClusterRepository
 import org.springframework.beans.factory.annotation.Autowired

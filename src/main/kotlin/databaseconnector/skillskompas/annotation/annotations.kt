@@ -1,9 +1,16 @@
-package databaseconnector.skillskompas.validation
+package databaseconnector.skillskompas.annotation
 
+import databaseconnector.skillskompas.validation.IsValidCompetenceId
+import databaseconnector.skillskompas.validation.IsValidDomainId
+import databaseconnector.skillskompas.validation.IsValidFunctionProfileRevisionId
+import databaseconnector.skillskompas.validation.IsValidTaskClusterId
 import javax.validation.Constraint
 import javax.validation.Payload
 import kotlin.annotation.AnnotationTarget.*
 import kotlin.reflect.KClass
+
+annotation class IsEnum
+
 
 @MustBeDocumented
 @Constraint(validatedBy = [IsValidTaskClusterId::class])
@@ -46,4 +53,4 @@ annotation class IsValidFunctionProfileRevisionIdValidator(
 )
 
 
-annotation class IsValidEnumValidator
+
