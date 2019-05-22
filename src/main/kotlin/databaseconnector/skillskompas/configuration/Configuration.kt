@@ -18,7 +18,6 @@ class WebConfig : WebMvcConfigurer {
     override fun addCorsMappings(registry: CorsRegistry) {
         registry.addMapping("/**")
     }
-
     override fun addResourceHandlers(registry: ResourceHandlerRegistry) {
 
         registry.addResourceHandler("swagger-ui.html")
@@ -29,4 +28,6 @@ class WebConfig : WebMvcConfigurer {
     }
 
 }
+
+
 

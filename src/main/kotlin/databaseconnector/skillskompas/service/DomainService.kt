@@ -1,6 +1,7 @@
 package databaseconnector.skillskompas.service
 
-import databaseconnector.skillskompas.model.Domain
+import databaseconnector.skillskompas.controller.dto.domain.DomainDTO
+import databaseconnector.skillskompas.controller.dto.toDomainDTO
 import databaseconnector.skillskompas.repository.DomainRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
@@ -14,8 +15,8 @@ class DomainService {
         return domainRepository.existsById(domainId)
     }
 
-    fun getAllDomains(): MutableIterable<Domain> {
-        return domainRepository.findAll()
+    fun getAllDomains(): List<DomainDTO> {
+        return domainRepository.findAll().map{it.toDomainDTO()}
     }
 
 }

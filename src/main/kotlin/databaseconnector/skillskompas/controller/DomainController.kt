@@ -1,5 +1,6 @@
 package databaseconnector.skillskompas.controller
 
+import databaseconnector.skillskompas.controller.dto.domain.DomainDTO
 import databaseconnector.skillskompas.model.Domain
 import databaseconnector.skillskompas.service.DomainService
 import databaseconnector.skillskompas.service.RequiredFieldService
@@ -14,9 +15,10 @@ class DomainController{
     lateinit var domainService: DomainService
 
     @GetMapping("/domain")
-    fun findAll(): MutableIterable<Domain> {
+    fun findAll(): List<DomainDTO> {
         return domainService.getAllDomains()
     }
+
 }
 
 
