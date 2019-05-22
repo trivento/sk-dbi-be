@@ -15,7 +15,7 @@ class TaskClusterController{
     lateinit var taskClusterService: TaskClusterService
 
     @GetMapping("/taskcluster")
-    fun findAll(): List<TaskClusterDTO> {
+    fun findAll(): List<Map<Long, String>> {
         return taskClusterService.getAllTaskClusters()
     }
 

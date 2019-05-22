@@ -15,7 +15,7 @@ class DomainController{
     lateinit var domainService: DomainService
 
     @GetMapping("/domain")
-    fun findAll(): List<DomainDTO> {
+    fun findAll(): List<Map<Long, String>> {
         return domainService.getAllDomains()
     }
 
