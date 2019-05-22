@@ -14,7 +14,7 @@ class CompetenceService {
         return competenceRepository.existsById(competenceId)
     }
 
-    fun getCompetencesList(): List<Map<Long, String>> {
+    fun getCompetencesList():List<MutableMap<Long, String>> {
         return competenceRepository.findAll().map { it.toKeyValue() }
     }
 }

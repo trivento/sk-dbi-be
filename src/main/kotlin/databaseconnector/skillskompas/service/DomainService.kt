@@ -14,7 +14,7 @@ class DomainService {
         return domainRepository.existsById(domainId)
     }
 
-    fun getDomainList(): List<Map<Long, String>> {
+    fun getDomainList(): List<MutableMap<Long, String>> {
         return domainRepository.findAll().map{ it.toKeyValue() }
     }
 

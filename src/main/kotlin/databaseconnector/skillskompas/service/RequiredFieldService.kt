@@ -42,17 +42,17 @@ class RequiredFieldService {
                 memberProperty.getter.returnType.toString().contains("Int")->  Type.NUM
                 memberProperty.getter.returnType.toString().contains("Long")-> Type.NUM
                 memberProperty.getter.returnType.toString().contains("String")-> Type.TEXT
-                memberProperty.getter.returnType.toString().contains("Enum")-> Type.CATEGORY
+                memberProperty.getter.returnType.toString().contains("Enum")-> Type.CAT
                 else -> Type.UNKNOWN
             }
-
+            var standardValues: List<MutableMap<Long,String>>? = mutableListOf(mutableMapOf())
             val constraints: MutableMap<String,Any> = mutableMapOf()
             for (sub in memberProperty.getter.annotations) {
                 when (sub.annotationClass.simpleName) {
                     "Max" -> constraints["maxValue"] = filterValue(sub,"value=\\d+" )
                     "Min" -> constraints["minValue"] = filterValue(sub, "value=\\d+")
                     "Size" -> constraints["minLength"] = filterValue(sub,"min=\\d+")
-                    "IsValidEnumValidator" -> constraints["standardValues"] = getList(memberProperty.name)
+                    "IsValidEnumValidator" ->  standardValues = getList(memberProperty.name)
                 }
 
             }
@@ -60,7 +60,9 @@ class RequiredFieldService {
                     type = type,
                     label = name,
                     defaultValue = getStandardValues().get(name),
-                    constraints = if(constraints.isNotEmpty()){ constraints } else {null}
+                    constraints = if(constraints.isNotEmpty()) { constraints } else {null},
+                    standardValues = if(standardValues!!.isNotEmpty()){ standardValues } else {mutableListOf(null)}
+
             )
             listOfProperties.add(property)
         }
@@ -77,12 +79,12 @@ class RequiredFieldService {
         return values.last.substringAfter("=").toInt()
     }
 
-    fun getList(nameOfList: String): List<Map<Long,String>> =
+    fun getList(nameOfList: String): List<MutableMap<Long, String>> =
         when (nameOfList) {
             "domainNames" ->  domainService.getDomainList()
             "competenceNames" ->  competenceService.getCompetencesList()
             "taskClusterNames" ->  taskClusterService.getTaskClusterList()
-            else -> listOf(mapOf())
+            else -> listOf(mutableMapOf())
         }
 }
 
