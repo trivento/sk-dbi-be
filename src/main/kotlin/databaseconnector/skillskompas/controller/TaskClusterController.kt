@@ -1,6 +1,5 @@
 package databaseconnector.skillskompas.controller
 
-import databaseconnector.skillskompas.controller.dto.taskcluster.TaskClusterDTO
 import databaseconnector.skillskompas.service.TaskClusterService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
@@ -14,9 +13,9 @@ class TaskClusterController{
     @Autowired
     lateinit var taskClusterService: TaskClusterService
 
-    @GetMapping("/taskcluster")
-    fun findAll(): List<Map<Long, String>> {
-        return taskClusterService.getAllTaskClusters()
+    @GetMapping("/taskclusterlist")
+    fun getTaskClusterList(): List<Map<Long, String>> {
+        return taskClusterService.getTaskClusterList()
     }
 
 }

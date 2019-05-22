@@ -15,7 +15,7 @@ class TaskClusterService {
         return taskClusterRepository.existsById(taskClusterId)
     }
 
-    fun getAllTaskClusters(): List<Map<Long, String>> {
+    fun getTaskClusterList(): List<Map<Long, String>> {
         return taskClusterRepository.findAll().map { it.toKeyValue() }
     }
 }

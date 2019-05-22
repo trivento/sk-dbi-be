@@ -1,19 +1,22 @@
 package databaseconnector.skillskompas.model
 
-import databaseconnector.skillskompas.validation.IsValidCompetenceIdValidator
-import databaseconnector.skillskompas.validation.IsValidDomainIdValidator
-import databaseconnector.skillskompas.validation.IsValidFunctionProfileRevisionIdValidator
-import databaseconnector.skillskompas.validation.IsValidTaskClusterIdValidator
+import databaseconnector.skillskompas.validation.*
 import javax.validation.constraints.*
 import kotlin.reflect.KProperty1
 import kotlin.reflect.full.declaredMemberProperties
 
 
-class AddableTask (
+data class AddableTask (
         @get: IsValidFunctionProfileRevisionIdValidator
         val functionProfileRevisionId: Long,
         @get: IsValidDomainIdValidator
         val domainId: Long,
+        @get: IsValidEnumValidator
+        val domainNames: Enum<*>,
+        @get: IsValidEnumValidator
+        val competenceNames: Enum<*>,
+        @get: IsValidEnumValidator
+        val taskClusterNames: Enum<*>,
         @get: IsValidTaskClusterIdValidator
         val taskClusterId: Long,
         @get: IsValidCompetenceIdValidator
