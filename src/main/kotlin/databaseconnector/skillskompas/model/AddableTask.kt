@@ -9,17 +9,11 @@ import kotlin.reflect.full.declaredMemberProperties
 data class AddableTask (
         @get: IsValidFunctionProfileRevisionIdValidator
         val functionProfileRevisionId: Long,
-        @get: IsValidDomainIdValidator
+        @get: IsValidDomainIdValidator @get: IsValidEnumValidator
         val domainId: Long,
-        @get: IsValidEnumValidator
-        val domainNames: Enum<*>,
-        @get: IsValidEnumValidator
-        val competenceNames: Enum<*>,
-        @get: IsValidEnumValidator
-        val taskClusterNames: Enum<*>,
-        @get: IsValidTaskClusterIdValidator
+        @get: IsValidTaskClusterIdValidator  @get: IsValidEnumValidator
         val taskClusterId: Long,
-        @get: IsValidCompetenceIdValidator
+        @get: IsValidCompetenceIdValidator  @get: IsValidEnumValidator
         val competenceId: Long,
         var taskRevisionId: Long?,
         var profileTaskId: Long? = null,
