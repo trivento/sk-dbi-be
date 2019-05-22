@@ -39,7 +39,7 @@ class RequiredFieldService {
                 memberProperty.getter.returnType.toString().contains("String")-> Type.TEXT
                 else -> Type.UNKNOWN
             }
-            var standardValues: List<MutableMap<Long,String>>? = mutableListOf(mutableMapOf())
+            var standardValues: List<MutableMap<Long,String>>? = null
             val constraints: MutableMap<String,Any> = mutableMapOf()
             for (sub in memberProperty.getter.annotations) {
                 when (sub.annotationClass.simpleName) {
@@ -74,12 +74,12 @@ class RequiredFieldService {
         return values.last.substringAfter("=").toInt()
     }
 
-    fun getList(nameOfList: String): List<MutableMap<Long, String>> =
+    fun getList(nameOfList: String): List<MutableMap<Long, String>>? =
         when (nameOfList) {
             "domainId" ->  domainService.getDomainList()
             "competenceId" ->  competenceService.getCompetencesList()
             "taskClusterId" ->  taskClusterService.getTaskClusterList()
-            else -> listOf(mutableMapOf())
+            else -> mutableListOf(mutableMapOf())
         }
 }
 
