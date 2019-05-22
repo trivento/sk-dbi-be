@@ -12,3 +12,5 @@ data class Competence(
         val weight_multiplier: Int,
         val type: String
 )
+
+fun Competence.toKeyValue() = mutableMapOf(competence_id to display_name)

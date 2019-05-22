@@ -1,4 +1,6 @@
 package databaseconnector.skillskompas.controller.dto.competence
 
- class CompetencePickListDTO(
+data class CompetencePickListDTO(
+        val competence_id: Long,
+        val displayName: String
 )

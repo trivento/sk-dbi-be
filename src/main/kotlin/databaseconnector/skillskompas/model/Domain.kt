@@ -20,3 +20,6 @@ data class Domain(
         val show_logo_in_pdf: Boolean,
         val default_url_id:Int
 )
+
+fun Domain.toKeyValue() = mutableMapOf(domain_id to display_name)
+

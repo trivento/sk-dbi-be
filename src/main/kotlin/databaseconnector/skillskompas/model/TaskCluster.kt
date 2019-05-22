@@ -10,3 +10,6 @@ data class TaskCluster(
         val name: String,
         val rank: Long?
 )
+
+fun TaskCluster.toKeyValue() = mutableMapOf(taskcluster_id to name)
+
