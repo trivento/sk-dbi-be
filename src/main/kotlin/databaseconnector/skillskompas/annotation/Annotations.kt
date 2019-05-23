@@ -1,9 +1,6 @@
 package databaseconnector.skillskompas.annotation
 
-import databaseconnector.skillskompas.validation.IsValidCompetenceId
-import databaseconnector.skillskompas.validation.IsValidDomainId
-import databaseconnector.skillskompas.validation.IsValidFunctionProfileRevisionId
-import databaseconnector.skillskompas.validation.IsValidTaskClusterId
+import databaseconnector.skillskompas.validation.*
 import javax.validation.Constraint
 import javax.validation.Payload
 import kotlin.annotation.AnnotationTarget.*
@@ -48,6 +45,17 @@ annotation class IsValidCompetenceIdValidator(
 @Retention(AnnotationRetention.RUNTIME)
 annotation class IsValidFunctionProfileRevisionIdValidator(
         val message: String = "This FunctionProfileRevisionId does not exist",
+        val groups: Array<KClass<out Any>> = [],
+        val payload: Array<KClass<out Payload>> = []
+)
+
+
+@MustBeDocumented
+@Constraint(validatedBy = [IsValidResultAreaId::class])
+@Target(allowedTargets = [PROPERTY_GETTER])
+@Retention(AnnotationRetention.RUNTIME)
+annotation class IsValidResultAreaIdValidator(
+        val message: String = "This resultAreaId does not exist",
         val groups: Array<KClass<out Any>> = [],
         val payload: Array<KClass<out Payload>> = []
 )

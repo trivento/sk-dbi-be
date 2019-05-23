@@ -13,6 +13,8 @@ data class AddableTask (
         val taskClusterId: Long,
         @get: IsValidCompetenceIdValidator  @get: IsEnum
         val competenceId: Long,
+        @get: IsValidResultAreaIdValidator
+        val resultAreaId: Long,
         var taskRevisionId: Long?,
         var profileTaskId: Long? = null,
         @get: Size(min = 10, message= "A task should be at least 10 characters long")
@@ -39,7 +41,6 @@ data class AddableTask (
         val taskGroup: Int? = null,
         @get: Min(0, message= "A task can only be active (1) or inactive (0)") @get: Max(1,message="A task can only be active (1) or inactive (0)")
         val active: Int = 0,
-        val resultAreaId: Int? = null,
         val dot: String? = null
 
 ){

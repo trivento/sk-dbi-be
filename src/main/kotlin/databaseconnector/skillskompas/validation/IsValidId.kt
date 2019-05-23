@@ -1,9 +1,6 @@
 package databaseconnector.skillskompas.validation
 
-import databaseconnector.skillskompas.annotation.IsValidCompetenceIdValidator
-import databaseconnector.skillskompas.annotation.IsValidDomainIdValidator
-import databaseconnector.skillskompas.annotation.IsValidFunctionProfileRevisionIdValidator
-import databaseconnector.skillskompas.annotation.IsValidTaskClusterIdValidator
+import databaseconnector.skillskompas.annotation.*
 import databaseconnector.skillskompas.service.*
 import org.springframework.beans.factory.annotation.Autowired
 import javax.validation.ConstraintValidator
@@ -38,5 +35,13 @@ class IsValidFunctionProfileRevisionId : ConstraintValidator<IsValidFunctionProf
     lateinit var functionProfileRevisionService: FunctionProfileRevisionService
     override fun isValid(value: Long, context: ConstraintValidatorContext): Boolean {
         return functionProfileRevisionService.validateFunctionProfileRevisionId(value)
+    }
+}
+
+class IsValidResultAreaId : ConstraintValidator<IsValidResultAreaIdValidator, Long> {
+    @Autowired
+    lateinit var resultAreaService: ResultAreaService
+    override fun isValid(value: Long, context: ConstraintValidatorContext): Boolean {
+        return resultAreaService.validateResultAreaId(value)
     }
 }

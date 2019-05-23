@@ -13,7 +13,7 @@ data class ProfileTask(
         val standard_task: Int,
         val time_score:Int,
         val taskgroup:Int?,
-        val resultarea_id:Int?,
+        val resultarea_id:Long?,
         val rank:Int?
 
 )
