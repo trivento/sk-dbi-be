@@ -25,7 +25,7 @@ class TaskRevisionController {
         return taskRevisionService.getTaskRevision(profileTaskId)
     }
     @PostMapping("/taskrevision")
-    fun addTaskRevision(@Valid @RequestBody taskRevision: TaskRevision):TaskRevision =
+    fun addTaskRevision(@Valid @RequestBody taskRevision: TaskRevision): Long =
             taskRevisionService.addTaskRevision(taskRevision)
 
     @DeleteMapping("/taskrevision/{id}")

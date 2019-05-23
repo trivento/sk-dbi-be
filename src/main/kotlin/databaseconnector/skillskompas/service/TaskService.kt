@@ -19,13 +19,14 @@ class TaskService{
     lateinit var profileCompetenceService: ProfileCompetenceService
 
     fun addTask(addableTask: AddableTask) {
-            val taskRevision = taskRevisionService.addTaskRevision(addableTask)
+            val taskRevisionId = taskRevisionService.addTaskRevision(addableTask)
+            addableTask.taskRevisionId = taskRevisionId
             domainTaskClusterService.addDomainTaskCluster(addableTask)
             taskCompetenceMappingService.addTaskCompetenceMapping(addableTask)
             val profileTask = profileTaskService.addProfileTask(addableTask)
             addableTask.profileTaskId = profileTask.profiletask_id
             profileCompetenceService.addProfileCompetence(addableTask)
-            activateTask(taskRevision.taskrevision_id)
+            activateTask(taskRevisionId)
     }
 
     fun activateTask(taskRevisionId: Long){

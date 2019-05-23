@@ -12,11 +12,11 @@ class TaskRevisionService {
     @Autowired
     lateinit var taskRevisionRepository: TaskRevisionRepository
 
-    fun addTaskRevision(taskRevision: TaskRevision): TaskRevision{
-        return taskRevisionRepository.save(taskRevision)
+    fun addTaskRevision(taskRevision: TaskRevision): Long{
+        return taskRevisionRepository.save(taskRevision).taskrevision_id
     }
 
-    fun addTaskRevision(addableTask: AddableTask): TaskRevision {
+    fun addTaskRevision(addableTask: AddableTask): Long {
         return addTaskRevision(createTaskRevisionFromAddableTask(addableTask))
     }
 

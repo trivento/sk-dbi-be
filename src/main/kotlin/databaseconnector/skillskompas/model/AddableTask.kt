@@ -41,7 +41,9 @@ data class AddableTask (
         val active: Int = 0,
         val resultAreaId: Int? = null,
         val dot: String? = null
+
 ){
+
 
     override fun toString(): String {
         return(
