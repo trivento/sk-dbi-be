@@ -51,7 +51,7 @@ publish-sk-dbi-be:
         tag: $ARTIFACT_TAG
 
 
-test-ll-importer:
+test-sk-dbi-be:
   box:
     id: triventoit-docker.jfrog.io/trivento-wercker:1.0.0
     username: $TRIVENTO_ARTIFACTORY_USERNAME
