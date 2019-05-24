@@ -8,7 +8,7 @@
 		<version>2.1.5.BUILD-SNAPSHOT</version>
 		<relativePath/> <!-- lookup parent from databaseconnector.skillskompas.controller.repository -->
 	</parent>
-	<groupId>database-connector</groupId>
+<!--		<groupId>database-connector</groupId>-->
 	<artifactId>sk-dbi-be</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>sk-dbi-be</name>
