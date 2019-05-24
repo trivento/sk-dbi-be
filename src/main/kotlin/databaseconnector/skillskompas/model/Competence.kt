@@ -13,4 +13,4 @@ data class Competence(
         val type: String
 )
 
-fun Competence.toKeyValue() = mutableMapOf(competence_id to display_name)
+fun Competence.convertToKeyValuePair() = mutableMapOf(competence_id to display_name)

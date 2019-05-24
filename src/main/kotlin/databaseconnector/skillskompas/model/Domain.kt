@@ -21,5 +21,5 @@ data class Domain(
         val default_url_id:Int
 )
 
-fun Domain.toKeyValue() = mutableMapOf(domain_id to display_name)
+fun Domain.convertToKeyValuePair() = mutableMapOf(domain_id to display_name)
 

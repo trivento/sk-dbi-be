@@ -1,6 +1,6 @@
 package databaseconnector.skillskompas.service
 
-import databaseconnector.skillskompas.model.toKeyValue
+import databaseconnector.skillskompas.model.convertToKeyValuePair
 import databaseconnector.skillskompas.repository.CompetenceRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
@@ -15,6 +15,6 @@ class CompetenceService {
     }
 
     fun getCompetencesList():List<MutableMap<Long, String>> {
-        return competenceRepository.findAll().map { it.toKeyValue() }
+        return competenceRepository.findAll().map { it.convertToKeyValuePair() }
     }
 }

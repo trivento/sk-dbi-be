@@ -1,6 +1,5 @@
 package databaseconnector.skillskompas.controller
 
-import databaseconnector.skillskompas.controller.dto.competence.CompetencePickListDTO
 import databaseconnector.skillskompas.service.CompetenceService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping

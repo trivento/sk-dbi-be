@@ -1,6 +1,6 @@
 package databaseconnector.skillskompas.service
 
-import databaseconnector.skillskompas.model.toKeyValue
+import databaseconnector.skillskompas.model.convertToKeyValuePair
 import databaseconnector.skillskompas.repository.TaskClusterRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
@@ -15,6 +15,6 @@ class TaskClusterService {
     }
 
     fun getTaskClusterList(): List<MutableMap<Long, String>> {
-        return taskClusterRepository.findAll().map { it.toKeyValue() }
+        return taskClusterRepository.findAll().map { it.convertToKeyValuePair() }
     }
 }
