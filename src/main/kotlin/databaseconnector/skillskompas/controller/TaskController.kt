@@ -28,6 +28,4 @@ class TaskController {
     fun deactivateTask(@Valid @PathVariable(value = "id") taskRevisionId: Long) {
         taskService.deactivateTask(taskRevisionId)
     }
-
-
 }

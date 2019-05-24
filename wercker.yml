@@ -1,0 +1,134 @@
+build:
+  box:
+    id: ubuntu
+  steps:
+
+build-sk-dbi-be:
+  box:
+    id: triventoit-docker.jfrog.io/sk-dbi-be:1.0.0
+    username: $TRIVENTO_ARTIFACTORY_USERNAME
+    password: $TRIVENTO_ARTIFACTORY_PASSWORD
+  steps:
+    - sharpershape/cache:
+        name: "Restore dependencies from cache"
+        action: restore
+    - script:
+        name: maven clean package
+        code: ./mvnw clean package
+    - script:
+        name: copy artifacts for docker creation
+        code: |
+          mkdir -p $WERCKER_OUTPUT_DIR/resources/.
+          cp -r target/sk-dbi-be.jar $WERCKER_OUTPUT_DIR/resources/.
+          cp version.txt Dockerfile $WERCKER_OUTPUT_DIR/.
+    - sharpershape/cache:
+        name: "Store dependencies to cache"
+        action: store
+
+publish-sk-dbi-be:
+  box:
+    id: ubuntu
+  steps:
+    - script:
+        name: compose the ARTIFACT_TAG
+        code: |
+          if [[ "$WERCKER_GIT_BRANCH" == "master" ]]; then
+            export ARTIFACT_TAG="rc-$(cat version.txt)-${WERCKER_GIT_COMMIT:0:7}";
+          else
+            export ARTIFACT_TAG="$(cat version.txt)-${WERCKER_GIT_COMMIT:0:7}";
+          fi;
+          echo "ARTIFACT_TAG: "$ARTIFACT_TAG
+          echo $ARTIFACT_TAG > artifactTag.txt
+          cp artifactTag.txt version.txt $WERCKER_OUTPUT_DIR/
+    - internal/docker-build:
+        dockerfile: Dockerfile
+        image-name: triventoit-docker.jfrog.io/$WERCKER_GIT_REPOSITORY
+    - internal/docker-push:
+        image-name: triventoit-docker.jfrog.io/$WERCKER_GIT_REPOSITORY
+        username: $TRIVENTO_ARTIFACTORY_USERNAME
+        password: $TRIVENTO_ARTIFACTORY_PASSWORD
+        repository: triventoit-docker.jfrog.io/$WERCKER_GIT_REPOSITORY
+        tag: $ARTIFACT_TAG
+
+
+test-ll-importer:
+  box:
+    id: triventoit-docker.jfrog.io/trivento-wercker:1.0.0
+    username: $TRIVENTO_ARTIFACTORY_USERNAME
+    password: $TRIVENTO_ARTIFACTORY_PASSWORD
+  steps:
+    - sharpershape/cache:
+        name: "Restore dependencies from cache"
+        action: restore
+    - script:
+        name: compose the ARTIFACT_TAG
+        code: |
+          if [[ "$WERCKER_GIT_BRANCH" == "master" ]]; then
+            export ARTIFACT_TAG="rc-$(cat version.txt)-${WERCKER_GIT_COMMIT:0:7}";
+          else
+            export ARTIFACT_TAG="$(cat version.txt)-${WERCKER_GIT_COMMIT:0:7}";
+          fi;
+          echo $ARTIFACT_TAG > artifactTag.txt
+    - script:
+        name: perform integration tests
+        code: |
+          ./mvnw verify
+          cp artifactTag.txt version.txt $WERCKER_OUTPUT_DIR/
+    - sharpershape/cache:
+        name: "Store dependencies to cache"
+        action: store
+
+preprelease:
+  box:
+    id: triventoit-docker.jfrog.io/trivento-wercker:1.0.0
+    username: $TRIVENTO_ARTIFACTORY_USERNAME
+    password: $TRIVENTO_ARTIFACTORY_PASSWORD
+  steps:
+    - script:
+      name: compose the TARGET_TAG and propose release
+      code: |
+        export LAST_VERSION_TAG="$(curl -u "$TRIVENTO_ARTIFACTORY_USERNAME:$TRIVENTO_ARTIFACTORY_PASSWORD" -X GET https://triventoit.jfrog.io/triventoit/api/docker/docker-prod/v2/"$WERCKER_GIT_REPOSITORY"/tags/list | jq '.tags' | sort -V | tail -n 3 | head -n 1)"
+        if [[ $LAST_VERSION_TAG =~ ([0-9]+)\.([0-9]+)\.([0-9]+) ]]; then
+          echo "Last version tag is: "$LAST_VERSION_TAG
+          MAJOR=${BASH_REMATCH[1]}; MINOR=${BASH_REMATCH[2]}; PATCH=${BASH_REMATCH[3]};
+          VERSION_TYPE=$(cat version.txt)
+          case ${VERSION_TYPE} in
+            major)
+              let MAJOR=${MAJOR}+1; TARGET_TAG=$MAJOR.0.0;;
+            minor)
+              let MINOR=${MINOR}+1; TARGET_TAG=$MAJOR.$MINOR.0;;
+            patch)
+              let PATCH=${PATCH}+1; TARGET_TAG=$MAJOR.$MINOR.$PATCH;;
+          esac;
+        else
+          echo "Matching the last version tag >"$LAST_VERSION_TAG"< failed";
+          TARGET_TAG="5.13.2";
+          echo "The tag is hardcoded to "$TARGET_TAG
+        fi;
+        echo $TARGET_TAG > targetTag.txt
+        ARTIFACT_TAG=$(cat artifactTag.txt)
+        cp artifactTag.txt targetTag.txt $WERCKER_OUTPUT_DIR/
+        echo "The release type is: "$VERSION_TYPE
+        echo "Docker image "$WERCKER_GIT_REPOSITORY":"$ARTIFACT_TAG" will be released as "$WERCKER_GIT_REPOSITORY":"$TARGET_TAG
+
+release:
+  box:
+    id: triventoit-docker.jfrog.io/trivento-wercker:1.0.0
+    username: $TRIVENTO_ARTIFACTORY_USERNAME
+    password: $TRIVENTO_ARTIFACTORY_PASSWORD
+  steps:
+    - script:
+      name: read ARTIFACT_TAG and TARGET_TAG
+      code: |
+        ARTIFACT_TAG=$(cat artifactTag.txt)
+        TARGET_TAG=$(cat targetTag.txt)
+    - script:
+      name: promote docker image to docker-prod
+      code: |
+        curl -i -u$TRIVENTO_ARTIFACTORY_USERNAME:$TRIVENTO_ARTIFACTORY_PASSWORD \
+          -X POST "https://triventoit.jfrog.io/triventoit/api/docker/docker-local/v2/promote" \
+          -H "Content-Type: application/json" \
+          -d  '{"targetRepo":"docker-prod","dockerRepository":"'$WERCKER_GIT_REPOSITORY'","tag":"'$ARTIFACT_TAG'","targetTag":"'$TARGET_TAG'"}'
+    - github-create-release:
+        token: $GITHUB_TOKEN
+        tag: $TARGET_TAG
