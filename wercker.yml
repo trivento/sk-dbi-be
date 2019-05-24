@@ -16,7 +16,7 @@ build-sk-dbi-be:
     - script:
         name: copy artifacts for docker creation
         code: |
-          mkdir -p $WERCKER_OUTPUT_DIR/resources/.
+          mkdir -p $WERCKER_OUTPUT_DIR/resources
           cp -r target/sk-dbi-be.jar $WERCKER_OUTPUT_DIR/resources/.
           cp version.txt Dockerfile $WERCKER_OUTPUT_DIR/.
     - sharpershape/cache:
