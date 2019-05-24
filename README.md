@@ -5,4 +5,3 @@ Does need a mssql backend running in a docker.
 TODO explain how to set this up
 
 
-nu wel?
