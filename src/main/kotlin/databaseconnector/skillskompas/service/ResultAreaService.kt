@@ -11,7 +11,11 @@ class ResultAreaService {
     @Autowired
     lateinit var resultAreaRepository: ResultAreaRepository
 
-    fun validateResultAreaId(resultAreaId: Long): Boolean {
-        return resultAreaRepository.existsById(resultAreaId)
+    fun validateResultAreaId(resultAreaId: Long?): Boolean {
+        return if (resultAreaId == null) {
+            true
+        } else {
+            resultAreaRepository.existsById(resultAreaId)
+        }
     }
 }

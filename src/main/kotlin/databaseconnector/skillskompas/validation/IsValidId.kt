@@ -41,7 +41,7 @@ class IsValidFunctionProfileRevisionId : ConstraintValidator<IsValidFunctionProf
 class IsValidResultAreaId : ConstraintValidator<IsValidResultAreaIdValidator, Long> {
     @Autowired
     lateinit var resultAreaService: ResultAreaService
-    override fun isValid(value: Long, context: ConstraintValidatorContext): Boolean {
+    override fun isValid(value: Long?, context: ConstraintValidatorContext): Boolean {
         return resultAreaService.validateResultAreaId(value)
     }
 }

@@ -14,7 +14,7 @@ data class AddableTask (
         @get: IsValidCompetenceIdValidator  @get: IsEnum
         val competenceId: Long,
         @get: IsValidResultAreaIdValidator
-        val resultAreaId: Long,
+        val resultAreaId: Long? = null,
         var taskRevisionId: Long?,
         var profileTaskId: Long? = null,
         @get: Size(min = 10, message= "A task should be at least 10 characters long")
