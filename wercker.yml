@@ -111,6 +111,7 @@ preprelease:
         echo "The release type is: "$VERSION_TYPE
         echo "Docker image "$WERCKER_GIT_REPOSITORY":"$ARTIFACT_TAG" will be released as "$WERCKER_GIT_REPOSITORY":"$TARGET_TAG
 
+
 release:
   box:
     id: triventoit-docker.jfrog.io/trivento-wercker:1.0.0
