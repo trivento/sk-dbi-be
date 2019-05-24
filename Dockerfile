@@ -5,7 +5,7 @@ MAINTAINER Tempranillo
 
 WORKDIR /app
 EXPOSE 8080
-ADD /target/skillskompas-0.0.1-SNAPSHOT.jar sk-dbi-be.jar
+ADD /target/sk-dbi-be-0.0.1-SNAPSHOT.jar sk-dbi-be.jar
 
 USER 997
 

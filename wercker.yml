@@ -5,9 +5,7 @@ build:
 
 build-sk-dbi-be:
   box:
-    id: triventoit-docker.jfrog.io/sk-dbi-be:1.0.0
-    username: $TRIVENTO_ARTIFACTORY_USERNAME
-    password: $TRIVENTO_ARTIFACTORY_PASSWORD
+    id: openjdk:11.0.3
   steps:
     - sharpershape/cache:
         name: "Restore dependencies from cache"
@@ -19,7 +17,7 @@ build-sk-dbi-be:
         name: copy artifacts for docker creation
         code: |
           mkdir -p $WERCKER_OUTPUT_DIR/resources/.
-          cp -r target/skillskompas-0.0.1-SNAPSHOT.jar $WERCKER_OUTPUT_DIR/resources/.
+          cp -r target/sk-dbi-be.jar $WERCKER_OUTPUT_DIR/resources/.
           cp version.txt Dockerfile $WERCKER_OUTPUT_DIR/.
     - sharpershape/cache:
         name: "Store dependencies to cache"

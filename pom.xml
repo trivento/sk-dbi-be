@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from databaseconnector.skillskompas.controller.repository -->
 	</parent>
 	<groupId>database-connector</groupId>
-	<artifactId>skillskompas</artifactId>
+	<artifactId>sk-dbi-be</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>skillskompas</name>
+	<name>sk-dbi-be</name>
 	<description>Connector voor skillskompas database</description>
 
 	<properties>
