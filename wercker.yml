@@ -50,6 +50,7 @@ publish-sk-dbi-be:
         tag: $ARTIFACT_TAG
 
 deploy-to-acc:
+
   box:
     id: triventoit-docker.jfrog.io/okd-build:0.0.2
     username: $TRIVENTO_ARTIFACTORY_USERNAME
