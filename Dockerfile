@@ -4,7 +4,7 @@ MAINTAINER Tempranillo
 
 EXPOSE 8080
 RUN echo "'Copy jar'"
-COPY target/sk-dbi-be-0.0.1-SNAPSHOT.jar sk-dbi-be.jar
+COPY resources/sk-dbi-be-0.0.1-SNAPSHOT.jar sk-dbi-be.jar
 RUN echo "'Done copying jar'"
 
 USER 997
