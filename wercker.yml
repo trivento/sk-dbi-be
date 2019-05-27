@@ -48,6 +48,12 @@ publish-sk-dbi-be:
         password: $TRIVENTO_ARTIFACTORY_PASSWORD
         repository: triventoit-docker.jfrog.io/$WERCKER_GIT_REPOSITORY
         tag: $ARTIFACT_TAG
+    - internal/docker-push:
+        image-name: triventoit-docker.jfrog.io/sk-dbi-be
+        username: $OPENSHIFT_USERNAME
+        password: $OPENSHIFT_TOKEN
+        repository: docker-registry-default.apps.okd-01.trivento.nl/skillskompas-a/sk-dbi-be
+        tag: $ARTIFACT_TAG
 
 deploy-to-acc:
   box:
