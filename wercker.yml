@@ -50,7 +50,6 @@ publish-sk-dbi-be:
         tag: $ARTIFACT_TAG
 
 deploy-to-acc:
-
   box:
     id: triventoit-docker.jfrog.io/okd-build:0.0.2
     username: $TRIVENTO_ARTIFACTORY_USERNAME
@@ -67,4 +66,5 @@ deploy-to-acc:
         name: tag in openshift
         code: |
           eval $(echo oc login https://control.okd-01.trivento.nl:8443 --token=$OPENSHIFT_TOKEN)
+          oc project skillskompas-a
           oc tag skillskompas-a/sk-dbi-be:$ARTIFACT_TAG skillskompas-a/sk-dbi-be:latest
