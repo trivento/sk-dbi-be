@@ -23,6 +23,10 @@ class RequiredFieldService {
         return when (name) {
             "task" -> buildRequiredFields(AddableTask::class)
             "domain" -> buildRequiredFields(Domain::class)
+            "competence" -> buildRequiredFields(Competence::class)
+            "property" -> buildRequiredFields(Property::class)
+            "taskcluster" -> buildRequiredFields(TaskCluster::class)
+            "taskcompetencemapping" -> buildRequiredFields(TaskCompetenceMapping::class)
             else -> emptyList()
         }
     }
@@ -30,12 +34,15 @@ class RequiredFieldService {
     fun buildRequiredFields(kClass: KClass<out Any>): List<Property> {
         val listOfProperties: MutableList<Property> = mutableListOf()
         for (memberProperty in kClass.declaredMemberProperties) {
+            print(memberProperty.getter.returnType.toString() + "\n")
             val name = memberProperty.name
             var type: Type = when {
+                memberProperty.getter.returnType.toString().contains("Map")->  Type.MAP
                 memberProperty.getter.returnType.toString().contains("Int")->  Type.NUM
                 memberProperty.getter.returnType.toString().contains("Long")-> Type.NUM
                 memberProperty.getter.returnType.toString().contains("String")-> Type.TEXT
                 memberProperty.getter.returnType.toString().contains("Boolean")-> Type.BOOL
+                memberProperty.getter.returnType.toString().contains("Any")-> Type.ANY
                 else -> Type.UNKNOWN
             }
             var standardValues: List<MutableMap<Long,String>>? = null

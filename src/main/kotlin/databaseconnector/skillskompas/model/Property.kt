@@ -9,5 +9,5 @@ data class Property(
 )
 
 enum class Type {
-    TEXT, NUM, CAT, UNKNOWN, BOOL
+    TEXT, NUM, CAT, UNKNOWN, BOOL, MAP, ANY
 }
