@@ -45,7 +45,6 @@ data class AddableTask (
 
 ){
 
-
     override fun toString(): String {
         return(
                 "displayName = ${displayName}" +
@@ -70,8 +69,6 @@ data class AddableTask (
                 "\nweight = ${weight}"
         )
     }
-
-
 }
 
 fun getStandardValues() = mapOf(

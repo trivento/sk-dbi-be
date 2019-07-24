@@ -24,8 +24,6 @@ class SecurityConfig(
         @Value(value = "\${auth0.apiAudience}")
         val apiAudience: String
 ): WebSecurityConfigurerAdapter() {
-
-
     @Throws(Exception::class)
     override fun configure(http: HttpSecurity) {
         JwtWebSecurityConfigurer
@@ -35,7 +33,6 @@ class SecurityConfig(
                 .antMatchers(HttpMethod.POST, "/api/**").authenticated()
                 .antMatchers(HttpMethod.GET, "/api/**").authenticated()
     }
-
 
     @Bean
     fun corsConfigurationSource(): CorsConfigurationSource {

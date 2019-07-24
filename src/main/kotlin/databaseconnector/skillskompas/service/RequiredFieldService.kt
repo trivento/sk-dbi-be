@@ -36,7 +36,6 @@ class RequiredFieldService {
                 memberProperty.getter.returnType.toString().contains("Long")-> Type.NUM
                 memberProperty.getter.returnType.toString().contains("String")-> Type.TEXT
                 memberProperty.getter.returnType.toString().contains("Boolean")-> Type.BOOL
-
                 else -> Type.UNKNOWN
             }
             var standardValues: List<MutableMap<Long,String>>? = null
